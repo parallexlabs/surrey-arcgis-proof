@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
 type: software
 title: "Surrey ArcGIS public-data proof"
+repository-code: "https://github.com/parallexlabs/surrey-arcgis-proof"
 version: 1.0.0
 authors:
   - name: "ParalleX Labs Inc."
