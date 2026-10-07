@@ -1,0 +1,21 @@
+[
+  {
+    "file": "development_projects.geojson",
+    "source_url": "https://services5.arcgis.com/YRpe0VKTJytZSSIB/arcgis/rest/services/Development%20Applications/FeatureServer/0",
+    "layer": "Development Applications",
+    "query": "STATUS IN ('Conditional Approval','Final Approval','Under Review','Initial Review'); assigned by point-in-polygon on official pilot polygons",
+    "retrieved_at": "2026-10-06T11:52:07.660949+00:00",
+    "feature_count": 119,
+    "licence": "Contains information licensed under the Open Government License \u2013 City of Surrey. (https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708)"
+  },
+  {
+    "file": "skytrain.geojson",
+    "source_url": "https://overpass-api.de/api/interpreter",
+    "layer": "SkyTrain lines and stations in Surrey",
+    "query": "railway=light_rail, station=light_rail|subway",
+    "retrieved_at": "2026-10-06T05:58:23.972485+00:00",
+    "feature_count": 225,
+    "licence": "\u00a9 OpenStreetMap contributors (ODbL)",
+    "licence_url": "https://opendatacommons.org/licenses/odbl/1-0/"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "version": "v2",
+  "label": "Demonstration update v2 (not an authentic City correction): revised schematic height estimate for project 19-0234-00",
+  "changes": [
+    {
+      "objectId": 207,
+      "estimatedHeightM": 135
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Public-data technical proof: Surrey development applications as schematic 3D extrusions with ArcGIS Maps SDK for JavaScript." />
+    <title>Surrey development applications – ArcGIS 3D public-data proof</title>
+    <script>
+      try {
+        window.localStorage.setItem('vaadin.statistics.optout', 'true');
+        document.documentElement.dataset.analyticsOptout = 'true';
+      } catch (error) {
+        document.documentElement.dataset.analyticsOptout = 'unavailable';
+      }
+    </script>
+  </head>
+  <body>
+    <a id="skip-link" class="skip-link" href="#projects-heading">Skip to project list</a>
+    <header class="site-header">
+      <h1>Surrey development applications: ArcGIS 3D public-data proof</h1>
+      <p id="honesty-note" class="honesty">
+        Public-data technical proof by ParalleX Labs Inc. Not a City of Surrey system. No connection to the City's
+        ArcGIS Online and no City credentials are used. Heights are schematic estimates, never approved heights, and
+        application boundaries are not building footprints.
+      </p>
+    </header>
+    <main id="main">
+      <section class="panel" aria-labelledby="scene-heading">
+        <h2 id="scene-heading">3D scene</h2>
+        <p id="scene-status" class="status" role="status" aria-live="polite">Loading 3D scene…</p>
+        <div id="map" class="map" role="region" aria-label="3D map of development applications. The project list below has equivalent facts."></div>
+      </section>
+      <section class="panel" aria-labelledby="versions-heading">
+        <h2 id="versions-heading">Demonstration attribute correction</h2>
+        <p>
+          Local versioned demonstration files, not authentic City corrections. Each version is applied to the unchanged
+          public snapshot; source facts are never altered and nothing is written to any service.
+        </p>
+        <div class="controls" role="group" aria-label="Demonstration update versions">
+          <button id="apply-v2" type="button" disabled>Apply demonstration update v2</button>
+          <button id="rollback-v1" type="button" disabled>Roll back to v1</button>
+        </div>
+        <p id="version-status" class="status" role="status" aria-live="polite">Loading data…</p>
+        <h3 id="diff-heading">Before and after</h3>
+        <ul id="diff-list" class="diff-list" aria-labelledby="diff-heading">
+          <li>No differences from the baseline.</li>
+        </ul>
+      </section>
+      <section class="panel" aria-labelledby="asset-heading">
+        <h2 id="asset-heading">Illustrative detailed asset</h2>
+        <div id="asset-facts"></div>
+      </section>
+      <section class="panel" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" tabindex="-1">Development applications</h2>
+        <p id="projects-summary">Loading project list…</p>
+        <ol id="projects-list" class="projects"></ol>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        Powered by <a href="https://www.esri.com/">Esri</a> (ArcGIS Maps SDK for JavaScript;
+        <a href="https://www.esri.com/en-us/legal/terms/full-master-agreement">Esri terms</a>,
+        <a href="https://developers.arcgis.com/javascript/latest/licensing/">SDK licensing</a>).
+      </p>
+      <p>
+        Map tiles and SkyTrain context © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>,
+        <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>;
+        <a href="https://operations.osmfoundation.org/policies/tiles/">OSM tile usage policy</a>.
+      </p>
+      <p>
+        Contains information licensed under the
+        <a href="https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708">Open Government License – City of Surrey</a>.
+      </p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

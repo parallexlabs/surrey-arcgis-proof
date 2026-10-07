@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+type: software
+title: "Surrey ArcGIS public-data proof"
+version: 1.0.0
+authors:
+  - name: "ParalleX Labs Inc."
+license: Apache-2.0
+abstract: >-
+  Static public-data technical proof showing City of Surrey development application boundaries as schematic 3D
+  extrusions with the ArcGIS Maps SDK for JavaScript, an illustrative podium-and-tower asset, versioned demonstration
+  attribute corrections with exact rollback, and an accessible facts list. Not a City of Surrey system. The Apache-2.0
+  licence covers only this project's own code; the ArcGIS Maps SDK for JavaScript is a separate proprietary Esri
+  dependency under Esri's terms and is not vendored in this repository.
+keywords:
+  - ArcGIS Maps SDK for JavaScript
+  - open data
+  - 3D
+  - accessibility
+  - Surrey

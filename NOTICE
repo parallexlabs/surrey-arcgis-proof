@@ -1,0 +1,65 @@
+Surrey ArcGIS public-data proof
+Copyright 2026 ParalleX Labs Inc.
+
+This product's own source code, configuration and documentation are licensed
+under the Apache License, Version 2.0 (see LICENSE). The Apache License applies
+only to ParalleX Labs Inc.'s own work. It does not relicense, sublicense or
+extend to the ArcGIS Maps SDK for JavaScript, City of Surrey data or
+OpenStreetMap data, each of which remains under its own licence or terms.
+
+Nature of this work
+-------------------
+This is a public-data technical proof by ParalleX Labs Inc. It is not a City of
+Surrey system, has no connection to the City's ArcGIS Online, uses no City
+credentials, and does not represent or claim any past or current work for the
+City of Surrey. Heights shown are schematic estimates, never approved heights.
+Application boundaries are not building footprints. The local version files
+are demonstration corrections, not authentic City corrections.
+
+Illustrative asset
+------------------
+The podium-and-tower object (40 m x 30 m x 15 m podium; 20 m x 20 m x 114 m
+tower) was authored by ParalleX Labs Inc. for this proof, with fixed
+illustrative dimensions. It is not derived from any City drawing, permit or
+approved design, and is not a City or applicant building design.
+
+ArcGIS Maps SDK for JavaScript (@arcgis/core 4.32.0)
+----------------------------------------------------
+Powered by Esri. The ArcGIS Maps SDK for JavaScript is proprietary software of
+Esri, used under Esri's own licence and product-specific terms. It is not
+licensed under the Apache License. Esri attribution and the SDK attribution are
+retained in the application.
+
+The application needs no runtime API key or login. That does NOT establish
+unconditional production licensing or a production deployment entitlement.
+Esri's E300 product-specific terms (footnotes 63 and 64, dated 2025-11-13)
+require web deployment to be in conjunction with other Esri products. Public
+deployment of the application remains pending verification of entitlement.
+Publication of this source code is a separate matter.
+
+  SDK licensing: https://developers.arcgis.com/javascript/latest/licensing/
+  Esri E300:     https://www.esri.com/content/dam/esrisites/en-us/media/legal/product-specific-terms-of-use/e300.pdf
+
+City of Surrey data
+-------------------
+Contains information licensed under the Open Government License - City of
+Surrey.
+  https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708
+
+  File:      public/data/development_projects.geojson (119 features)
+  Source:    https://services5.arcgis.com/YRpe0VKTJytZSSIB/arcgis/rest/services/Development%20Applications/FeatureServer/0
+  Layer:     Development Applications
+  Retrieved: 2026-10-06T11:52:07.660949+00:00
+
+OpenStreetMap data and tiles
+----------------------------
+(c) OpenStreetMap contributors, available under the Open Database License
+(ODbL) 1.0.
+  ODbL:              https://opendatacommons.org/licenses/odbl/1-0/
+  Copyright:         https://www.openstreetmap.org/copyright
+  Tile usage policy: https://operations.osmfoundation.org/policies/tiles/
+
+  File:      public/data/skytrain.geojson (225 features)
+  Source:    https://overpass-api.de/api/interpreter
+  Layer:     SkyTrain lines and stations in Surrey
+  Retrieved: 2026-10-06T05:58:23.972485+00:00
