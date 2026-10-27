@@ -8,7 +8,7 @@ import {
 import { applyVersion, buildBaseline, safeRecordUrl } from '../../src/model';
 import type { Project, SourceEntry, UpdateVersion } from '../../src/model';
 
-// Use real project-root fixtures independently of jsdom URL resolution. [6]
+// Use real project-root fixtures independently of jsdom URL resolution.
 const fixtureRoot = resolve(process.cwd(), 'public', 'data');
 const read = (file: string): unknown => JSON.parse(readFileSync(
   resolve(fixtureRoot, file), 'utf8',

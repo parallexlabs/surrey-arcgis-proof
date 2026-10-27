@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { applyVersion, buildBaseline, safeRecordUrl } from '../../src/model';
 import type { Project, SourceEntry, UpdateVersion } from '../../src/model';
 
-// Derived links may repair the verified legacy delimiter, never source facts. [12]
+// Derived links may repair the verified legacy delimiter, never source facts.
 // These are offline contracts; no portal requests or downstream login assertions.
 const HOST = 'https://citizenportal.surrey.ca';
 const FORWARD_PATH = '/citizenportal/integration/publicProjectForward.html';

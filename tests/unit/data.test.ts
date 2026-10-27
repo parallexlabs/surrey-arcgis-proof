@@ -4,7 +4,7 @@ import { DataLoadError, loadProofData } from '../../src/data';
 import type { Fetcher, ProofData } from '../../src/data';
 import { applyVersion, diffStates } from '../../src/model';
 
-// Public loader contracts and supplied modules: [4].
+// Public loader contracts.
 const BASE = '/demos/surrey-arcgis/';
 const FILES = [
   'development_projects.geojson', 'SOURCES.json', 'skytrain.geojson',

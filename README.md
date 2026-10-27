@@ -72,7 +72,7 @@ npm run test:e2e
 - Browser tests intercept OSM tile requests, so no headless run loads live OSM tiles.
 - `npm run smoke:live` is optional. It is a separate read-only check of the City service and a bounded Overpass query, using `scripts/live-smoke.mjs`. It does not touch the frozen app fixtures or app tests, and it is not run in CI. See [docs/live-run.md](docs/live-run.md).
 
-Recorded verification results are in [BUILD_LOG.md](BUILD_LOG.md). Use the commands above to rerun the checks in your own environment.
+Use the commands above to rerun the checks in your own environment.
 
 ## 60-second demo script
 

@@ -6,7 +6,6 @@ import {
 } from '../../src/model';
 import type { Project, SourceEntry, UpdateVersion } from '../../src/model';
 
-// Contract grounded in the supplied implementation and adjudication. [3]
 // Rules describe provenance, not fixed literals. Only heightM and its rule
 // change under corrections; rollback restores every field from the baseline.
 interface Feature {

@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-// Verify the existing frozen-fixture manifest against actual bytes. [15]
+// Verify the existing frozen-fixture manifest against actual bytes.
 const DATA_ROOT = resolve(process.cwd(), 'public', 'data');
 const EXPECTED_FILES = [
   'SOURCES.json',

@@ -207,7 +207,7 @@ async function expectScene(page: Page, height: number): Promise<void> {
     loaded: true, types: ['geojson', 'geojson', 'geojson', 'graphics', 'web-tile'],
   });
 
-  // Only the projected physical mesh extent gets a <1 mm tolerance. [16]
+  // Only the projected physical mesh extent gets a <1 mm tolerance.
   // Queried project heights above remain exactly 129 or 135, without rounding.
   const result = await sceneState(page);
   if (!result.available) {

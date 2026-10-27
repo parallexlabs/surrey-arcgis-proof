@@ -6,7 +6,7 @@ import type Layer from '@arcgis/core/layers/Layer';
 import type { Project } from '../../src/model';
 import type { SceneDiagnostics } from '../../src/scene';
 
-// Injected SDK-boundary regressions, not claims of real service failures. [18]
+// Injected SDK-boundary regressions, not claims of real service failures.
 const PATH = '/demos/surrey-arcgis/';
 const TIMEOUT = 90_000;
 const PNG = Buffer.from(
@@ -284,7 +284,7 @@ for (const mode of failureModes) {
             },
           });
         } else {
-          // Identify the replacement after genuine SDK loading, not at Collection.add. [22]
+          // Identify the replacement after genuine SDK loading, not at Collection.add.
           const originalMethod = view.whenLayerView;
           Object.defineProperty(view, 'whenLayerView', {
             configurable: true, writable: true,
@@ -529,7 +529,7 @@ test('HR003 synthetic persisted pagehide/pageshow retains the same usable real S
     });
   });
 
-// Normal unmodified SDK path: no popup initialization or fault hooks. [21]
+// Normal unmodified SDK path: no popup initialization or fault hooks.
 test('normal correction and exact rollback before the first popup',
   async ({ page, audit }, testInfo) => {
     const original = await initial(page, audit, testInfo);
