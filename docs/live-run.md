@@ -12,13 +12,13 @@ City endpoint: [Development Applications FeatureServer layer 0](https://services
 
 Overpass endpoint: [public interpreter](https://overpass-api.de/api/interpreter). Query: `[out:json][timeout:20];node(5324415604);out tags;`. The returned OSM base timestamp was 2026-10-07T03:51:12Z. This is a one-node service smoke check, not a refresh or validation of every transit feature.
 
-Exact timestamped request/response receipts and the final JSON report are retained in ignored `_build/live/`. The earlier successful runs (02:18:37–02:18:42 and 03:30:36–03:30:38 UTC) and failed live-script runs are retained there as well. The first failed Overpass request used malformed unnamed timeout syntax and returned 400; the next guard rejected a correct query before sending it. Both were fixed before the successful run above.
+Exact timestamped request/response receipts and the final JSON report are retained in ignored `_build/live/`. The earlier successful runs (02:18:37 to 02:18:42 and 03:30:36 to 03:30:38 UTC) and failed live-script runs are retained there as well. The first failed Overpass request used malformed unnamed timeout syntax and returned 400; the next guard rejected a correct query before sending it. Both were fixed before the successful run above.
 
 The frozen application files retain their original retrieval dates: development snapshot 2026-10-06T11:52:07.660949+00:00; transit snapshot 2026-10-06T05:58:23.972485+00:00. All three original SHA256SUMS entries still match. This smoke run did not change any fixture or source fact.
 
 ## Derived record-link verification
 
-On 2026-10-07 UTC, a separate read-only forwarder check for showcase 207 returned HTTP500 for the source legacy query `?year=19 seq=0234` encoded by URL normalization, and HTTP200 for `?year=19&seq=0234`. The latter response forwards to the portal application. Its downstream pages and login behavior were not tested. All 119 source links retain their original bytes; the model narrowly repairs their derived links, independently tested offline. This link repair is separate from the v2 height demonstration and is not a City record edit.
+On 2026-10-07 UTC, a separate read-only forwarder check for showcase 207 returned HTTP 500 for the source legacy query `?year=19 seq=0234` encoded by URL normalization, and HTTP 200 for `?year=19&seq=0234`. The latter response forwards to the portal application. Its downstream pages and login behavior were not tested. All 119 source links retain their original bytes; the model narrowly repairs their derived links, independently tested offline. This link repair is separate from the v2 height demonstration and is not a City record edit.
 
 ## Application verification scope
 

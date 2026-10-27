@@ -34,7 +34,7 @@ esriConfig.request.useIdentity = false;
 
 const OSM_URL = 'https://tile.openstreetmap.org/{level}/{col}/{row}.png';
 const OSM_COPYRIGHT = '© OpenStreetMap contributors (ODbL)';
-const CITY_COPYRIGHT = 'Contains information licensed under the Open Government License – City of Surrey';
+const CITY_COPYRIGHT = 'Contains information licensed under the Open Government License - City of Surrey';
 const PROJECT_POPUP_TITLE = 'Development application (schematic)';
 const DEFAULT_TIMEOUT_MS = 90_000;
 const CLOSE_UP_ZOOM = 16;
@@ -268,7 +268,7 @@ function createTransitLayer(url: string, kind: 'point' | 'line'): GeoJSONLayer {
 function createAssetGraphics(showcase: Project): Graphic[] {
   const { podium, tower } = ILLUSTRATIVE_ASSET;
   const template = new PopupTemplate({
-    title: `${ILLUSTRATIVE_ASSET.label} – ILLUSTRATIVE (not an approved design)`,
+    title: `${ILLUSTRATIVE_ASSET.label}: ILLUSTRATIVE (not an approved design)`,
     content: () => createAssetFacts(showcase)
   });
   const symbol = (color: number[]): MeshSymbol3D =>

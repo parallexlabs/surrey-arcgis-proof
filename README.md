@@ -6,11 +6,11 @@ This is **not** a City of Surrey system. It has no connection to the City's ArcG
 
 ## What the proof shows
 
-1. **Source to model** – Project 19-0234-00 (OBJECTID 207) has a public description stating 43 storeys. The estimate rule is extracted storeys × 3 m, giving 129 m. Records with no storey count get a labelled 12 m illustrative fallback.
-2. **Illustrative asset** – One schematic podium-and-tower object sits at the showcase project's snapshot assigned representative point (see below): 15 m podium plus 114 m tower, 129 m overall. Its height is fixed and is not changed by the demonstration corrections. It is conspicuously labelled illustrative, is not an approved building design, and its placement is not a City design location.
-3. **Attribute correction** – The local demonstration file `updates/v2.json` sets the showcase estimate to 135 m. The page shows a before/after diff (129 m → 135 m) and updates the 3D scene. Source facts are not changed and nothing is written to any service.
-4. **Exact rollback** – `updates/v1.json` replays the unchanged baseline exactly, showing 135 m → 129 m. Every version is applied to the immutable baseline.
-5. **Accessibility** – A keyboard-operable list holds the same facts as the popups for all 119 projects. It still works when WebGL is unavailable.
+1. **Source to model:** Project 19-0234-00 (OBJECTID 207) has a public description stating 43 storeys. The estimate rule is extracted storeys × 3 m, giving 129 m. Records with no storey count get a labelled 12 m illustrative fallback.
+2. **Illustrative asset:** One schematic podium-and-tower object sits at the showcase project's snapshot assigned representative point (see below): 15 m podium plus 114 m tower, 129 m overall. Its height is fixed and is not changed by the demonstration corrections. It is conspicuously labelled illustrative, is not an approved building design, and its placement is not a City design location.
+3. **Attribute correction:** The local demonstration file `updates/v2.json` sets the showcase estimate to 135 m. The page shows a before/after diff (129 m → 135 m) and updates the 3D scene. Source facts are not changed and nothing is written to any service.
+4. **Exact rollback:** `updates/v1.json` replays the unchanged baseline exactly, showing 135 m → 129 m. Every version is applied to the immutable baseline.
+5. **Accessibility:** A keyboard-operable list holds the same facts as the popups for all 119 projects. It still works when WebGL is unavailable.
 
 ## Data and provenance
 
@@ -24,7 +24,7 @@ Fixture hashes are recorded in [SHA256SUMS](public/data/SHA256SUMS).
 
 ### Locally derived assignment attributes
 
-Each raw project feature also carries `assign_lon`, `assign_lat` and `pilot_area`. These are **not** City layer fields and **not** City-surveyed building coordinates. They were derived locally by the upstream sibling snapshot script (`surrey-devviz-demo`, `scripts/fetch_data.py`, function `assignment_point`):
+Each raw project feature also carries `assign_lon`, `assign_lat` and `pilot_area`. These are **not** City layer fields and **not** City-surveyed building coordinates. They were derived locally by the upstream sibling snapshot script (`surrey-devviz-prototype`, `scripts/fetch_data.py`, function `assignment_point`):
 
 - The assignment point is the Shapely `representative_point()` of the application geometry, recorded as rounded `assign_lon`/`assign_lat`.
 - `pilot_area` is assigned by point-in-polygon of that point against the official pilot plan polygons. The source query recorded in `SOURCES.json` ("assigned by point-in-polygon on official pilot polygons") describes this step.
@@ -76,11 +76,11 @@ Use the commands above to rerun the checks in your own environment.
 
 ## 60-second demo script
 
-- **0–15 s:** The 3D scene loads. Open the popup for 19-0234-00 and show that the list entry carries the same facts.
-- **15–25 s:** Show the illustrative podium and tower, with its "Illustrative" label and provenance.
-- **25–40 s:** Click "Apply demonstration update v2". The diff shows 129 m → 135 m and the extrusion rises.
-- **40–50 s:** Click "Roll back to v1". The diff shows 135 m → 129 m and the baseline is restored exactly.
-- **50–60 s:** Tab through the project list and links. Then show the no-WebGL fallback, where the list and versions still work.
+- **0 to 15 s:** The 3D scene loads. Open the popup for 19-0234-00 and show that the list entry carries the same facts.
+- **15 to 25 s:** Show the illustrative podium and tower, with its "Illustrative" label and provenance.
+- **25 to 40 s:** Click "Apply demonstration update v2". The diff shows 129 m → 135 m and the extrusion rises.
+- **40 to 50 s:** Click "Roll back to v1". The diff shows 135 m → 129 m and the baseline is restored exactly.
+- **50 to 60 s:** Tab through the project list and links. Then show the no-WebGL fallback, where the list and versions still work.
 
 To show the fallback, launch Chromium with the `--disable-webgl` flag and open the preview URL. With the locally installed Chromium 153.0.8010.12 and this flag, `getContext('webgl2')` returned `null`. The scene panel then reports that WebGL is unavailable, while the list and version controls keep working. To reproduce the automated evidence after `npm run build`:
 
@@ -102,7 +102,7 @@ npx playwright show-report
 - **This project's source code:** Apache-2.0, © ParalleX Labs Inc. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 - **ArcGIS Maps SDK for JavaScript:** proprietary Esri software under Esri's own terms. See [SDK licensing](https://developers.arcgis.com/javascript/latest/licensing/) and [Esri E300 product-specific terms](https://www.esri.com/content/dam/esrisites/en-us/media/legal/product-specific-terms-of-use/e300.pdf).
 - **Production deployment is not settled.** The app needs no runtime key or login, but that does **not** establish a production deployment entitlement. E300 footnotes 63 and 64 (dated 2025-11-13) require web deployment to be in conjunction with other Esri products. Public deployment of the application is therefore pending entitlement verification. Publishing the source code is a separate matter.
-- **City data:** Contains information licensed under the [Open Government License – City of Surrey](https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708).
+- **City data:** Contains information licensed under the [Open Government License - City of Surrey](https://opendata-surrey.hub.arcgis.com/pages/55089a19491a4fe59a41e059fd8af708).
 - **OpenStreetMap:** © OpenStreetMap contributors, [ODbL](https://opendatacommons.org/licenses/odbl/1-0/). See also the [copyright page](https://www.openstreetmap.org/copyright) and [tile usage policy](https://operations.osmfoundation.org/policies/tiles/).
 - **Attribution:** "Powered by Esri" and the SDK attribution are kept in the page footer and on the map.
 

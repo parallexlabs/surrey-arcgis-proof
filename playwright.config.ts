@@ -7,7 +7,7 @@ if (!/^\d+$/.test(portText) || !Number.isInteger(port) || port < 1024 || port > 
 }
 const baseURL = `http://127.0.0.1:${port}/demos/surrey-arcgis/`;
 
-// Requires npm run build first; tests exercise the production preview. [9]
+// Requires npm run build first; tests exercise the production preview.
 export default defineConfig({
   testDir: './tests/e2e',
   outputDir: 'test-results',
